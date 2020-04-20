@@ -135,10 +135,8 @@ class State:
         :param event: {"id": "1", "name": "Event1", "status": "Bad"}
         :return: Ничего не возвращяет.
         """
-
-
-        #todo  допилить дату начала
-        # просрочка
+        #todo  возможно имеет смысл сделать через датафрейм
+        try:
 
         for step in reversed(self.state[self.intent_name]['steps']):
             if step['id'] == self.state[self.intent_name]['next']['action']['id']:
